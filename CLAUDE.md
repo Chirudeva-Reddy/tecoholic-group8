@@ -62,6 +62,14 @@ Treat these as hard requirements. Before finishing a task, say which ones the ch
 - **Bilingual.** Retrieval and answers must handle Arabic and English.
 - **Retrieved documents are untrusted input.** Screen them for indirect prompt injection before they reach the model.
 
+## Git commits
+
+- **Never commit as an AI agent.** Commits must be authored and committed by the human team member,
+  using their own git identity. Never use `Claude`, `noreply@anthropic.com` or any other agent identity.
+- **No AI attribution in commits or PRs.** No `Co-Authored-By: Claude ...`, no `Claude-Session:` trailers,
+  and no "Generated with Claude Code" lines. AI agents must not appear as contributors on GitHub.
+- Before committing, check `git config user.name` / `user.email`. If they name an AI agent, stop and ask.
+
 ## Layout
 
 - `src/supplychain_copilot/`: application package. Subpackages: `api` (typed HTTP API), `agent` (tool-use loop), `llm` (the only place model clients are created), `tools` (deterministic tools), `rag` (retrieval + citations), `guardrails`, `observability`, `evaluation`.
