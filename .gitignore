@@ -1,0 +1,35 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Data that must never be committed (only public/synthetic data in data/)
+data/raw/
+data/private/
+*.sqlite
+*.db
+
+# Eval run outputs (commit summaries to docs/, not raw runs)
+eval/results/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
